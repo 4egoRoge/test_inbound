@@ -9,8 +9,22 @@ slider.querySelector('.btnLeft').onclick = function() {
         cards[n].classList.remove("block");
         cards[n+3].classList.add("block");
         n++
-    } else if(n=3) {
-        cards[3].classList.remove("block");
-        cards[0].classList.add("block");
+    } else {
+        n = 0
+        cards[n+3].classList.remove("block");
+        cards[n].classList.add("block");
+    }
+  };
+
+  slider.querySelector('.btnRight').onclick = function() {
+    if(n+3 != cards.length) {
+        cards[n+3].classList.remove("block");
+        cards[n].classList.add("block");
+        n--
+    } else {
+        n = 0
+        cards[n].classList.remove("block");
+        cards[n+3].classList.add("block");
+        n++
     }
   };
